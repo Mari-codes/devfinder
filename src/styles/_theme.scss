@@ -1,0 +1,31 @@
+@import './variables';
+
+:root {
+  --text-theme: #{$neutral-500};
+  --text-theme-hover: #{$neutral-700};
+  --text-input: #{$neutral-500};
+  --text-title: #{$neutral-700};
+  --text-subtitle: #{$blue-500};
+  --text-bio: #{$neutral-500};
+  --text-bio-opacity: 0.75;
+  --text-title-section: #{$neutral-500};
+  --text-subtitle-section: #{$neutral-700};
+  --text-link: #{$neutral-500};
+  --logo-color: #{$neutral-900};
+  --background-body: #{$neutral-100};
+}
+
+[data-theme="dark"]{
+    --text-theme: #{$neutral-200};
+    --text-theme-hover: #{$neutral-0};
+    --text-input: #{$neutral-0};
+    --text-title: #{$neutral-0};
+    --text-subtitle: #{$blue-300};
+    --text-bio: #{$neutral-0};
+    --text-bio-opacity: 0.70;
+    --text-title-section: #{$neutral-0};
+    --text-subtitle-section: #{$neutral-0};
+    --text-link: #{$neutral-0};
+    --logo-color: #{$neutral-0};
+    --background-body: #{$neutral-900};
+}

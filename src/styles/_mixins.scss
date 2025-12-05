@@ -1,0 +1,12 @@
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin text-preset($size, $line-height, $weight: $weight-regular) {
+  font-family: $font-primary;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+}
