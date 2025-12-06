@@ -7,6 +7,7 @@
   background-color: var(--background-section);
   border-radius: $radius-20;
   padding: $spacing-600;
+  box-shadow: var(--box-shadow);
 
   &--empty {
     flex-direction: column;

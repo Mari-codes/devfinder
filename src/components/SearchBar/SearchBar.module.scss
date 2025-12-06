@@ -9,6 +9,7 @@
     border-radius: $radius-20;
     width: 100%;
     flex-wrap: nowrap;
+    box-shadow: var(--box-shadow);
 
     &:focus-within {
       border: 2px solid $blue-300;

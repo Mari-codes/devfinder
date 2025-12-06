@@ -16,6 +16,8 @@
   --logo-color: #{$neutral-900};
   --background-body: #{$neutral-100};
   --background-section: #{$neutral-0};
+  --box-shadow: #{$box-shadow-light};
+
 }
 
 [data-theme='dark'] {
@@ -34,4 +36,6 @@
   --logo-color: #{$neutral-0};
   --background-body: #{$neutral-900};
   --background-section: #{$neutral-800};
+  --box-shadow: #{$box-shadow-none};
+
 }
