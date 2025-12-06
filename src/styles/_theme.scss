@@ -17,7 +17,6 @@
   --background-body: #{$neutral-100};
   --background-section: #{$neutral-0};
   --box-shadow: #{$box-shadow-light};
-
 }
 
 [data-theme='dark'] {
@@ -37,5 +36,4 @@
   --background-body: #{$neutral-900};
   --background-section: #{$neutral-800};
   --box-shadow: #{$box-shadow-none};
-
 }
