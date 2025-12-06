@@ -1,22 +1,23 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
-.theme-toggle{
-    background: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    cursor: pointer;
+.theme-toggle {
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
 
-    &__label {
-        font-size: $text-8-size;
-        letter-spacing: $text-8-line-height;
-        font-weight: $weight-bold;
-        color: var(--text-theme);
+  &__label {
+    font-size: $text-8-size;
+    letter-spacing: $text-8-line-height;
+    font-weight: $weight-bold;
+    color: var(--text-theme);
 
-        &:hover {
-            color: var(--text-theme-hover);
-        }
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: var(--text-theme-hover);
     }
-
+  }
 }
