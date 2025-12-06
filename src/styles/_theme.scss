@@ -11,21 +11,27 @@
   --text-title-section: #{$neutral-500};
   --text-subtitle-section: #{$neutral-700};
   --text-link: #{$neutral-500};
+  --error-title: #{$neutral-700};
+  --error-subtitle: #{$neutral-300};
   --logo-color: #{$neutral-900};
   --background-body: #{$neutral-100};
+  --background-section: #{$neutral-0};
 }
 
-[data-theme="dark"]{
-    --text-theme: #{$neutral-200};
-    --text-theme-hover: #{$neutral-0};
-    --text-input: #{$neutral-0};
-    --text-title: #{$neutral-0};
-    --text-subtitle: #{$blue-300};
-    --text-bio: #{$neutral-0};
-    --text-bio-opacity: 0.70;
-    --text-title-section: #{$neutral-0};
-    --text-subtitle-section: #{$neutral-0};
-    --text-link: #{$neutral-0};
-    --logo-color: #{$neutral-0};
-    --background-body: #{$neutral-900};
+[data-theme='dark'] {
+  --text-theme: #{$neutral-200};
+  --text-theme-hover: #{$neutral-0};
+  --text-input: #{$neutral-0};
+  --text-title: #{$neutral-0};
+  --text-subtitle: #{$blue-300};
+  --text-bio: #{$neutral-0};
+  --text-bio-opacity: 0.7;
+  --text-title-section: #{$neutral-0};
+  --text-subtitle-section: #{$neutral-0};
+  --text-link: #{$neutral-0};
+  --error-title: #{$neutral-0};
+  --error-sutitle: #{$neutral-200};
+  --logo-color: #{$neutral-0};
+  --background-body: #{$neutral-900};
+  --background-section: #{$neutral-800};
 }
