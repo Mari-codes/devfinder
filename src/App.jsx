@@ -1,24 +1,48 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
+import styles from './App.module.scss';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar';
+import UserCard from './components/UserCard';
+import { fetchGithubUser } from './services/github';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'light';
+  });
+
+  const [userData, setUserData] = useState(null);
+
+  const defaultUser = 'octocat';
+
+  useEffect(() => {
+    const loadDefaultUser = async () => {
+      try {
+        const data = await fetchGithubUser(defaultUser);
+        setUserData(data);
+      } catch (err) {
+        console.error('Failed to load default user', err);
+      }
+    };
+
+    loadDefaultUser();
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className={styles.app}>
+      <Header theme={theme} onToggle={toggleTheme} />
+      <SearchBar onResults={setUserData} />
+      <UserCard user={userData} />
+    </div>
+  );
 }
 
-export default App
+export default App;
