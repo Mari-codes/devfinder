@@ -53,20 +53,26 @@ const UserCard = ({ user }) => {
         </div>
 
         <div className={styles['user-card__stats']}>
-          <span className={styles['user-card__stat-label']}>Repos</span>
-          <span className={styles['user-card__stat-label']}>Followers</span>
-          <span className={styles['user-card__stat-label']}>Following</span>
-
-          <span className={styles['user-card__stat-value']}>
-            {user.public_repos}
-          </span>
-          <span className={styles['user-card__stat-value']}>
-            {user.followers}
-          </span>
-          <span className={styles['user-card__stat-value']}>
-            {user.following}
-          </span>
+          <div>
+            <span className={styles['user-card__stat-label']}>Repos</span>
+            <span className={styles['user-card__stat-value']}>
+              {user.public_repos}
+            </span>
+          </div>
+          <div>
+            <span className={styles['user-card__stat-label']}>Followers</span>
+            <span className={styles['user-card__stat-value']}>
+              {user.followers}
+            </span>
+          </div>
+          <div>
+            <span className={styles['user-card__stat-label']}>Following</span>
+            <span className={styles['user-card__stat-value']}>
+              {user.following}
+            </span>
+          </div>
         </div>
+
         <div className={styles['user-card__info']}>
           <div className={styles['user-card__info-item']}>
             <LocationIcon className={styles['user-card__icon']} />
