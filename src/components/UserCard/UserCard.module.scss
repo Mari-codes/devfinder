@@ -140,13 +140,18 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    padding: $spacing-400;
+    padding: $spacing-300;
 
     &__avatar {
       margin-right: 0;
       margin-bottom: $spacing-100;
       width: 75px;
       height: 75px;
+    }
+
+    &__bio {
+      font-size: $text-3-mobile-size;
+      padding: $spacing-150 0;
     }
 
     &__section {
@@ -157,7 +162,6 @@
 
     &__top {
       flex-direction: column;
-      align-items: flex-start;
     }
 
     &__joined {
@@ -171,12 +175,20 @@
       align-items: center;
       text-align: center;
       margin: 0 auto;
-      padding: $spacing-200 0;
+      padding: $spacing-100 0;
       gap: $spacing-150;
+      font-size: $text-3-mobile-size;
+    }
+    &__stat-label {
+      font-size: $text-3-mobile-size;
+    }
+    &__stat-value {
+      font-size: $text-3-mobile-size;
     }
 
-    &__info {
-      grid-template-columns: 1fr;
+    &__info-item {
+      font-size: $text-3-mobile-size;
+      gap: 25px;
     }
   }
 }

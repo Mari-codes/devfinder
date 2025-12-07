@@ -12,7 +12,7 @@ function App() {
   });
 
   const [userData, setUserData] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const defaultUser = 'octocat';
 
@@ -43,18 +43,24 @@ function App() {
 
   return (
     <div className={styles.app}>
-      {loading ? (
-        <div className={styles['app__loading']}>
-          <GithubIcon className={styles['app__loading-icon']} />
-          <p className={styles['app__loading-text']}>Loading...</p>
-        </div>
-      ) : (
-        <>
-          <Header theme={theme} onToggle={toggleTheme} />
-          <SearchBar onResults={setUserData} />
-          <UserCard user={userData} loading={loading} />
-        </>
-      )}
+      <div
+        className={`${styles.app__loading} ${
+          loading ? styles['app__loading--show'] : styles['app__loading--hide']
+        }`}
+      >
+        <GithubIcon className={styles['app__loading-icon']} />
+        <p className={styles['app__loading-text']}>Loading...</p>
+      </div>
+
+      <div
+        className={`${styles.app__content} ${
+          loading ? styles['app__content--hide'] : styles['app__content--show']
+        }`}
+      >
+        <Header theme={theme} onToggle={toggleTheme} />
+        <SearchBar onResults={setUserData} />
+        <UserCard user={userData} loading={loading} />
+      </div>
     </div>
   );
 }

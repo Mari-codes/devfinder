@@ -1,32 +1,84 @@
 @use './styles/variables' as *;
 
 .app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
+  position: relative;
   max-width: 730px;
   width: 100%;
   margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.app__loading {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  background: var(--bg-primary);
+
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease,
+    transform 0.45s ease;
+  transform-origin: center;
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  &--hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    pointer-events: none;
+  }
+
+  &-icon {
+    width: 90px;
+    height: 90px;
+    fill: var(--text-title);
+  }
+
+  &-text {
+    color: var(--text-title);
+  }
+}
+
+.app__content {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
 
-  &__loading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    gap: 1rem;
+  transition:
+    opacity 0.45s ease,
+    visibility 0.45s ease,
+    transform 0.45s ease;
+  transform-origin: top center;
 
-    &-icon {
-      width: 90px;
-      height: 90px;
-      fill: var(--text-title);
-    }
+  &--show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
-    &-text {
-      color: var(--text-title);
-    }
+  &--hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    pointer-events: none;
   }
 }
 
