@@ -1,16 +1,69 @@
-# React + Vite
+# Devfinder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Read this in other languages
+- [Português (Brasil)](./docs/README.pt-BR.md)
+  
+Devfinder is a responsive web application built with **React + Vite** and **JavaScript** that allows users to search for GitHub profiles and view detailed information about them. It leverages the GitHub API to provide a clean and intuitive interface for exploring developer profiles.
 
-Currently, two official plugins are available:
+Check out the project running here: [Devfinder on Vercel](https://mari-devfinder.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Search GitHub Users**: Find any GitHub user by username.
+- **Profile Information**: Displays user photo, name, username, bio, creation date, followers, repositories, location, workplace, and personal website.
+- **Themes**: Light and dark themes available, with preferences saved in local storage.
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices.
+- **Loading Screen**: Initial loading screen for a smooth user experience.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+| Technology        | Purpose                                   |
+|-------------------|-------------------------------------------|
+| **React + Vite**         |  App setup and UI                      |
+| **JavaScript** | Logic and state management |
+| **Axios**         | HTTP client for API requests              |
+| **Sass**          | Styling                                   |
+| **CSS Modules**   | Scoped component styles                   |
+| **BEM Methodology** | Organized and maintainable CSS structure |
+| **SVGR**          | SVG handling                              |
+| **ESLint & Prettier** | Code quality and formatting tools      |
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js (>= 14.x)
+- npm or yarn
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/devfinder.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd devfinder
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+   or
+   
+   ```bash
+   yarn install
+   ```
+## Running the Project
+
+```sh
+npm run dev
+```
+or
+```bash
+yarn dev
+```
