@@ -16,18 +16,6 @@
 
   &__error {
     padding: $spacing-150;
-
-    &--title {
-      font-size: $text-2-size;
-      font-weight: $weight-bold;
-      color: var(--error-title);
-    }
-
-    &--subtitle {
-      color: var(--error-subtitle);
-      font-size: $text-5-size;
-      font-weight: $weight-bold;
-    }
   }
 
   &__section {
@@ -134,6 +122,18 @@
   }
 }
 
+.user-card__error-title {
+  font-size: $text-2-size;
+  font-weight: $weight-bold;
+  color: var(--error-title);
+}
+
+.user-card__error-subtitle {
+  color: var(--error-subtitle);
+  font-size: $text-5-size;
+  font-weight: $weight-bold;
+}
+
 @media (max-width: 660px) {
   .user-card {
     text-align: center;
@@ -172,7 +172,7 @@
       text-align: center;
       margin: 0 auto;
       padding: $spacing-200 0;
-      gap:$spacing-150;
+      gap: $spacing-150;
     }
 
     &__info {
