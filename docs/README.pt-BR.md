@@ -1,7 +1,7 @@
 # devfinder
 
 ## Leia em outros idiomas
-- [English](./README.md)
+- [English](../README.md)
 
 devfinder é uma aplicação web responsiva construída com **React + Vite** e **JavaScript** que permite buscar perfis do GitHub e visualizar informações detalhadas sobre eles. Ela utiliza a API do GitHub para fornecer uma interface limpa e intuitiva para explorar perfis de desenvolvedores.
 
@@ -45,7 +45,7 @@ Confira o projeto rodando aqui: [devfinder no Vercel](https://mari-devfinder.ver
    ```bash
    git clone https://github.com/seu-usuario/devfinder.git
    ```
-2. - Navegue até a pasta do projeto:
+2. Navegue até a pasta do projeto:
    ```bash
    cd devfinder
    ```

@@ -1,9 +1,9 @@
-# Devfinder
+# devfinder
 
 ## Read this in other languages
 - [Português (Brasil)](./docs/README.pt-BR.md)
   
-Devfinder is a responsive web application built with **React + Vite** and **JavaScript** that allows users to search for GitHub profiles and view detailed information about them. It leverages the GitHub API to provide a clean and intuitive interface for exploring developer profiles.
+devfinder is a responsive web application built with **React + Vite** and **JavaScript** that allows users to search for GitHub profiles and view detailed information about them. It leverages the GitHub API to provide a clean and intuitive interface for exploring developer profiles.
 
 Check out the project running here: [Devfinder on Vercel](https://mari-devfinder.vercel.app/)
 
