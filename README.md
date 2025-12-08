@@ -26,7 +26,7 @@ Check out the project running here: [Devfinder on Vercel](https://mari-devfinder
 | **React + Vite**         |  App setup and UI                      |
 | **JavaScript** | Logic and state management |
 | **Axios**         | HTTP client for API requests              |
-| **Sass**          | Styling                                   |
+| **Scss**          | Styling                                   |
 | **CSS Modules**   | Scoped component styles                   |
 | **BEM Methodology** | Organized and maintainable CSS structure |
 | **SVGR**          | SVG handling                              |
@@ -67,3 +67,21 @@ or
 ```bash
 yarn dev
 ```
+
+## Screenshots
+
+### Loading (Light & Dark Mode)
+![Loading Light](./src/assets/screenshots/loading-light.png)
+![Loading Dark](./src/assets/screenshots/loading-dark.png)
+
+### Home (Light Mode)
+![Home Light](./src/assets/screenshots/home-light.png)
+
+### User Profile
+![Profile](./src/assets/screenshots/profile.png)
+
+### User Not Found
+![User Not Found](./src/assets/screenshots/user-not-found.png)
+
+### Profile (Dark Mode)
+![Dark Mode](./src/assets/screenshots/profile-dark.png)
