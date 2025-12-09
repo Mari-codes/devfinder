@@ -10,7 +10,7 @@ const ThemeToggle = ({ theme, onToggle }) => {
       <span className={styles['theme-toggle__label']}>
         {isLight ? 'DARK' : 'LIGHT'}
       </span>
-      <img src={isLight ? iconMoon : iconSun} alt="" />
+      <img src={isLight ? iconMoon : iconSun} alt="theme switch icon" />
     </button>
   );
 };

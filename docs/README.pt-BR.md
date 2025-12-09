@@ -1,6 +1,7 @@
 # devfinder
 
 ## Leia em outros idiomas
+
 - [English](../README.md)
 
 devfinder é uma aplicação web responsiva construída com **React + Vite** e **JavaScript** que permite buscar perfis do GitHub e visualizar informações detalhadas sobre eles. Ela utiliza a API do GitHub para fornecer uma interface limpa e intuitiva para explorar perfis de desenvolvedores.
@@ -21,26 +22,28 @@ Confira o projeto rodando aqui: [devfinder no Vercel](https://mari-devfinder.ver
 
 ## Stack Tecnológica
 
-| Tecnologia         | Finalidade                                |
-|--------------------|-------------------------------------------|
-| **React + Vite**   | Configuração da aplicação e interface     |
-| **JavaScript**     | Lógica e gerenciamento de estado          |
-| **Axios**          | Cliente HTTP para requisições à API       |
-| **Scss**           | Estilização                               |
-| **CSS Modules**    | Estilos escopados por componente          |
-| **Metodologia BEM**| Estrutura de CSS organizada e sustentável |
-| **SVGR**           | Manipulação de SVGs                       |
-| **ESLint & Prettier** | Qualidade e formatação de código       |
+| Tecnologia            | Finalidade                                |
+| --------------------- | ----------------------------------------- |
+| **React + Vite**      | Configuração da aplicação e interface     |
+| **JavaScript**        | Lógica e gerenciamento de estado          |
+| **Axios**             | Cliente HTTP para requisições à API       |
+| **Scss**              | Estilização                               |
+| **CSS Modules**       | Estilos escopados por componente          |
+| **Metodologia BEM**   | Estrutura de CSS organizada e sustentável |
+| **SVGR**              | Manipulação de SVGs                       |
+| **ESLint & Prettier** | Qualidade e formatação de código          |
 
 ---
 
 ## Primeiros Passos
 
 ### Pré-requisitos
+
 - Node.js (>= 14.x)
 - npm ou yarn
 
 ### Instalação
+
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/devfinder.git
@@ -50,20 +53,25 @@ Confira o projeto rodando aqui: [devfinder no Vercel](https://mari-devfinder.ver
    cd devfinder
    ```
 3. Instale as dependências:
+
    ```bash
    npm install
    ```
+
    ou
-   
+
    ```bash
    yarn install
    ```
+
 ## Executando o Projeto
 
 ```sh
 npm run dev
 ```
+
 ou
+
 ```bash
 yarn dev
 ```
@@ -71,17 +79,22 @@ yarn dev
 ## Screenshots
 
 ### Loading (Light & Dark Mode)
+
 ![Loading Light](/src/assets/screenshots/loading-light.png)
 ![Loading Dark](/src/assets/screenshots/loading-dark.png)
 
 ### Home (Modo Claro)
+
 ![Home Light](/src/assets/screenshots/home-light.png)
 
 ### Perfil do Usuário
+
 ![Profile](/src/assets/screenshots/profile.png)
 
 ### Usuário Não Encontrado
+
 ![User Not Found](/src/assets/screenshots/user-not-found.png)
 
 ### Perfil (Modo Escuro)
+
 ![Dark Mode](/src/assets/screenshots/profile-dark.png)
