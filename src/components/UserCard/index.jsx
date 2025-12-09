@@ -3,24 +3,11 @@ import LocationIcon from '../../assets/icons/icon-location.svg?react';
 import TwitterIcon from '../../assets/icons/icon-twitter.svg?react';
 import CompanyIcon from '../../assets/icons/icon-company.svg?react';
 import WebsiteIcon from '../../assets/icons/icon-website.svg?react';
+import UserCardEmpty from './UserCardEmpty';
+import ConditionalLink from '../../helpers/ConditionalLink';
 
 const UserCard = ({ user }) => {
-  if (!user) {
-    return (
-      <main className={`${styles['user-card']} ${styles['user-card--empty']}`}>
-        <p
-          className={`${styles['user-card__error']} ${styles['user-card__error--title']}`}
-        >
-          No results found!
-        </p>
-        <p
-          className={`${styles['user-card__error']} ${styles['user-card__error--subtitle']}`}
-        >
-          We couldn’t find any GitHub users matching your search.
-        </p>
-      </main>
-    );
-  }
+  if (!user) return <UserCardEmpty />;
 
   return (
     <main className={styles['user-card']}>
@@ -81,54 +68,39 @@ const UserCard = ({ user }) => {
 
           <div className={styles['user-card__info-item']}>
             <TwitterIcon className={styles['user-card__icon']} />
-            {user.twitter_username ? (
-              <a
-                href={`https://twitter.com/${user.twitter_username}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles['user-card__link']}
-              >
-                @{user.twitter_username}
-              </a>
-            ) : (
-              <span>Not Available</span>
-            )}
+            <ConditionalLink
+              condition={user.twitter_username}
+              href={`https://twitter.com/${user.twitter_username}`}
+              className={styles['user-card__link']}
+            >
+              @{user.twitter_username}
+            </ConditionalLink>
           </div>
 
           <div className={styles['user-card__info-item']}>
             <WebsiteIcon className={styles['user-card__icon']} />
-            {user.blog ? (
-              <a
-                href={
-                  user.blog.startsWith('http')
-                    ? user.blog
-                    : `https://${user.blog}`
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles['user-card__link']}
-              >
-                {user.blog}
-              </a>
-            ) : (
-              <span>Not Available</span>
-            )}
+            <ConditionalLink
+              condition={user.blog}
+              href={
+                user.blog?.startsWith('http')
+                  ? user.blog
+                  : `https://${user.blog}`
+              }
+              className={styles['user-card__link']}
+            >
+              {user.blog}
+            </ConditionalLink>
           </div>
 
           <div className={styles['user-card__info-item']}>
             <CompanyIcon className={styles['user-card__icon']} />
-            {user.company ? (
-              <a
-                href={`https://github.com/${user.company.replace('@', '')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles['user-card__link']}
-              >
-                {user.company}
-              </a>
-            ) : (
-              <span>Not Available</span>
-            )}
+            <ConditionalLink
+              condition={user.company}
+              href={`https://github.com/${user.company?.replace('@', '')}`}
+              className={styles['user-card__link']}
+            >
+              {user.company}
+            </ConditionalLink>
           </div>
         </div>
       </section>
